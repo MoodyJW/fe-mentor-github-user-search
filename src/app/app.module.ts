@@ -3,22 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SearchBarComponent } from './search-bar/search-bar.component';
-import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
-import { CardComponent } from './card/card.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
     ThemeToggleComponent,
-    CardComponent
+    CardComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

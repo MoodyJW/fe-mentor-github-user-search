@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --blue: rgb(0, 121, 255);
+  --primary-bg: rgb(246, 248, 255);
+  --card-bg: rgb(254, 254, 254);
+  --primary-text: rgb(43, 52, 66);
+  --secondary-text: rgb(105, 124, 154);
+  --accent-text: rgb(75, 106, 155);
+  --error-text: rgb(247, 70, 70);
+
+  &.dark-theme {
+    --primary-bg: rgb(20, 29, 47);
+    --card-bg: rgb(30, 42, 71);
+    --primary-text: rgb(255, 255, 255);
+  }
+}
