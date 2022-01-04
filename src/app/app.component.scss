@@ -1,0 +1,20 @@
+body {
+  background: var(--primary-bg);
+  color: var(--primary-text);
+  font-family: "Space Mono", monospace;
+  line-height: 25px;
+  font-size: 15px;
+  font-weight: var(--regular);
+  padding: 31px 24px;
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+      font-size: 26px;
+      line-height: 39px;
+    }
+  }
+}

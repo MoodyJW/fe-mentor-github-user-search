@@ -1,7 +1,9 @@
-<ng-container>
+<body class="{{ theme }}">
   <header>
-    <h1>devfinder</h1>
-    <app-theme-toggle></app-theme-toggle>
+    <div class="header-container">
+      <h1>devfinder</h1>
+      <app-theme-toggle (themeToggled)="toggleTheme($event)"></app-theme-toggle>
+    </div>
   </header>
   <main>
     <app-search-bar></app-search-bar>
@@ -9,4 +11,4 @@
       <app-card></app-card>
     </article>
   </main>
-</ng-container>
+</body>
