@@ -1,3 +1,6 @@
+@use "~@angular/material" as mat;
+@include mat.core();
+
 :root {
   --blue: rgb(0, 121, 255);
   --primary-bg: rgb(246, 248, 255);
@@ -21,4 +24,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+.mat-form-field-outline,
+.mat-form-field-empty.mat-form-field-label,
+.mat-form-field-label,
+.mat-form-field-underline,
+.mat-input-element,
+::placeholder {
+  color: var(--primary-text);
+  font-family: "Space Mono", monospace;
+  // align-items: center;
+}
+
+.mat-form-field {
+  font-family: "Space Mono", monospace;
+}
+
+.mat-form-field-prefix {
+  align-self: center;
 }

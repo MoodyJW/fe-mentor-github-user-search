@@ -1,0 +1,31 @@
+.search-form {
+  width: 100%;
+  border-radius: 15px;
+  // height: 60px;
+  color: var(--primary-text);
+  background-color: var(--card-bg);
+  display: flex;
+  align-items: center;
+
+  .form-field {
+    width: 100%;
+
+    .search-icon {
+      color: var(--blue);
+      font-size: 28px;
+      margin-right: 9px;
+    }
+
+    .search-button {
+      border: none;
+      border-radius: 10px;
+      background-color: var(--blue);
+      width: 84px;
+      height: 46px;
+    }
+  }
+}
+
+.search-input {
+  color: var(--primary-text);
+}
