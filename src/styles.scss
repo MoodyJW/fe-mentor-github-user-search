@@ -9,10 +9,11 @@
   --bold: 700;
   --regular: 400;
 
-  &.dark-theme {
+  .dark-theme {
     --primary-bg: rgb(20, 29, 47);
     --card-bg: rgb(30, 42, 71);
     --primary-text: rgb(255, 255, 255);
+    --icon-hover: rgb(144, 164, 212);
   }
 }
 
@@ -20,12 +21,4 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  color: var(--primary-text);
-  font-family: "Space Mono", monospace;
-  line-height: 25px;
-  font-size: 15px;
-  font-weight: var(--regular);
 }
