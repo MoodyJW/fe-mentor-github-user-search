@@ -1,31 +1,98 @@
-.search-form {
-  width: 100%;
-  border-radius: 15px;
-  // height: 60px;
-  color: var(--primary-text);
-  background-color: var(--card-bg);
-  display: flex;
-  align-items: center;
-
-  .form-field {
-    width: 100%;
-
-    .search-icon {
-      color: var(--blue);
-      font-size: 28px;
-      margin-right: 9px;
-    }
-
-    .search-button {
-      border: none;
-      border-radius: 10px;
-      background-color: var(--blue);
-      width: 84px;
-      height: 46px;
-    }
-  }
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
 }
 
-.search-input {
-  color: var(--primary-text);
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  zoom: 1;
+}
+
+.search-wrapper {
+  width: 100%;
+  height: 60px;
+  margin: 35px 0 0 0;
+  border-radius: 15px;
+  background-color: var(--card-bg);
+  box-shadow: var(--input-box-shadow);
+
+  .search-icon {
+    float: left;
+    position: relative;
+    margin: 20px 0 20px 16px;
+  }
+
+  input {
+    width: 200px;
+    height: 60px;
+    padding: 10px 10px 10px 0;
+    margin: 0 0 0 10px;
+    float: left;
+    color: var(--primary-text);
+    font-size: 13px;
+    font-family: "Space Mono", monospace;
+    border: 0;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    border-top-style: none;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  input::-webkit-input-placeholder {
+    color: var(--primary-text);
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  input:-moz-placeholder {
+    color: var(--primary-text);
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  input:-ms-input-placeholder {
+    color: var(--primary-text);
+    font-weight: 400;
+    font-style: normal;
+    border-style: none;
+  }
+
+  button {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--button-bg);
+    color: white;
+    width: 84px;
+    height: 46px;
+    overflow: visible;
+    position: relative;
+    float: right;
+    margin: 7px 7px 7px 0;
+    padding: 0;
+    cursor: pointer;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-size: 14px;
+
+    &:active,
+    &:focus,
+    &:hover,
+    &:focus:before,
+    &:active:before {
+      background: var(--button-hover-bg) !important;
+      outline: 0;
+    }
+  }
+
+  button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
 }
