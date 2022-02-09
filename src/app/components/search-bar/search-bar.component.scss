@@ -1,0 +1,48 @@
+.search-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+  background: var(--card-bg);
+  width: 100%;
+  padding: 0.75rem;
+  gap: 0.5rem;
+  box-shadow: var(--input-box-shadow);
+
+  .input-container {
+    width: min(87.2%, 32rem);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .search-input {
+      width: 80%;
+      font-size: 11.5px;
+      font-family: "Space Mono", monospace;
+      outline: none;
+      border: 0;
+      background: inherit;
+      color: var(--primary-text);
+
+      &::-webkit-input-placeholder {
+        color: var(--primary-text);
+      }
+    }
+  }
+
+  .search-button {
+    padding: 12.5px 16px;
+    width: 85px;
+    height: 45px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    background: var(--button-bg);
+
+    &:hover {
+      cursor: pointer;
+      background: var(--button-hover-bg);
+    }
+  }
+}
