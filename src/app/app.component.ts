@@ -3,7 +3,7 @@ import { User } from 'src/app/services/users.service';
 
 export const DEFAULT_USER = {
   avatar_url: 'https://avatars.githubusercontent.com/u/583231?v=4',
-  bio: '',
+  bio: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.',
   blog: 'https://github.blog',
   company: '@github',
   created_at: '2011-01-25T18:44:36Z',

@@ -40,6 +40,7 @@ export class SearchBarComponent implements OnInit {
       .subscribe(
         (user: User) => {
           this.noResults = false;
+          console.log(user);
           this.userReturned.emit(user);
         },
         (error) => (this.noResults = error)
