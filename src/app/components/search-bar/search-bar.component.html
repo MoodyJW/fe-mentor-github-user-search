@@ -11,7 +11,11 @@
       class="search-input"
       placeholder="Search GitHub username..."
       autocomplete="off"
+      [formControl]="searchValue"
     />
   </div>
-  <button class="search-button" type="submit">Search</button>
+  <p class="error-message" *ngIf="noResults">No results</p>
+  <button type="submit" class="search-button" (click)="searchUser()">
+    Search
+  </button>
 </form>

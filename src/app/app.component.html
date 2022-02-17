@@ -8,9 +8,9 @@
         ></app-theme-toggle>
       </div>
     </header>
-    <app-search-bar></app-search-bar>
+    <app-search-bar (userReturned)="userReturned($event)"></app-search-bar>
     <article>
-      <app-card></app-card>
+      <app-card [user]="user"></app-card>
     </article>
   </main>
 </body>

@@ -1,1 +1,21 @@
-<p>card works!</p>
+<div class="card">
+  <div class="container">
+    <img src="{{ user.avatar_url }}" />
+    <h4>
+      <b>{{ user.name }}</b>
+      <p>@{{ user.login }}</p>
+      <!-- need to add user.html_url anchor -->
+    </h4>
+    <p>{{ user.created_at }}</p>
+    <p>lorem ipsum which is I guess the bio or something</p>
+    <div class="stats-block">
+      <p>repos {{ user.public_repos }}</p>
+      <p>followers {{ user.followers }}</p>
+      <p>following {{ user.following }}</p>
+    </div>
+    <p>{{ user.location }}</p>
+    <p>{{ user.twitter_username || "Not Available" }}</p>
+    <p>{{ user.blog }}</p>
+    <p>{{ user.company }}</p>
+  </div>
+</div>
