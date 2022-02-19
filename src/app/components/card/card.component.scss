@@ -2,93 +2,10 @@
   margin-top: 16px;
   background: var(--card-bg);
   border-radius: 15px;
+  color: var(--accent-text);
+  box-shadow: var(--input-box-shadow);
 
   .card-content-container {
     padding: 32px 24px;
-
-    .avatar-header-container {
-      display: flex;
-      gap: 18px;
-      margin-bottom: 33px;
-
-      img {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-      }
-
-      .header-container {
-        display: flex;
-        flex-direction: column;
-        line-height: 19px;
-
-        .user-name {
-          line-height: 24px;
-        }
-
-        .gh-user-page {
-          color: var(--button-bg);
-          text-decoration: none;
-        }
-
-        .joined-date {
-          font-size: 13px;
-          margin-top: 6px;
-        }
-      }
-    }
-
-    .user-bio {
-      font-size: 13px;
-      margin-bottom: 23px;
-    }
-
-    .stats-block {
-      display: flex;
-      justify-content: space-around;
-      background-color: var(--primary-bg);
-      border-radius: 10px;
-      padding: 18px 15px;
-      margin-bottom: 24px;
-
-      .stats-col {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 16px;
-        line-height: 24px;
-
-        .stat-title {
-          font-size: 11px;
-          line-height: 16px;
-        }
-      }
-    }
-
-    // .links-block {
-    //   display: flex;
-    //   // flex-direction: column;
-    //   gap: 16px;
-    //   font-size: 13px;
-
-    //   .icons {
-    //     display: flex;
-    //     flex-direction: column;
-    //     gap: 16px;
-    //   }
-
-    //   .link {
-    //     display: flex;
-    //     gap: 8px;
-    //     align-items: center;
-    //   }
-    // }
-    .links-grid {
-      display: grid;
-      grid-gap: 8px;
-
-      .grid-item {
-      }
-    }
   }
 }

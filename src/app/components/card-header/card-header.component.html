@@ -1,0 +1,27 @@
+<div class="avatar-header-container">
+  <img src="{{ userInfo.avatarUrl }}" />
+  <div class="header-container">
+    <h2 class="user-name">
+      <b *ngIf="userInfo.name; else noName">{{ userInfo.name }}</b>
+      <ng-template #noName class="not-available"
+        ><b>Not Available</b></ng-template
+      >
+    </h2>
+    <a class="gh-user-page" href="{{ userInfo.htmlUrl }}"
+      >@{{ userInfo.login }}</a
+    >
+    <p class="joined-date">
+      Joined {{ userInfo.createdAt | date: "dd MMM yyyy" }}
+    </p>
+  </div>
+</div>
+<p class="user-bio" *ngIf="userInfo.bio; else noBio">
+  {{
+    userInfo.bio.length > maxBioLength
+      ? (userInfo.bio | slice: 0:maxBioLength) + "..."
+      : userInfo.bio
+  }}
+</p>
+<ng-template #noBio>
+  <p class="user-bio not-available">User Bio Not Available</p>
+</ng-template>

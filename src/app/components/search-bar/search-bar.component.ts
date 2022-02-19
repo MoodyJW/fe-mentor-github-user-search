@@ -3,7 +3,8 @@ import { FormControl, Validators } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { User, UsersService } from 'src/app/services/users.service';
+import { User } from '../../models/user.model';
+import { UsersService } from '../../services/users.service';
 
 @Component({
   selector: 'app-search-bar',
@@ -16,6 +17,7 @@ export class SearchBarComponent implements OnInit {
   buttonColor = 'var(--button-bg)';
   noResults = false;
   unsubscribe$ = new Subject();
+  user$: any;
 
   constructor(private usersService: UsersService) {}
 
@@ -34,13 +36,12 @@ export class SearchBarComponent implements OnInit {
   }
 
   searchUser(): void {
-    this.usersService
+    this.user$ = this.usersService
       .getUser(this.searchValue.value)
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe(
         (user: User) => {
           this.noResults = false;
-          console.log(user);
           this.userReturned.emit(user);
         },
         (error) => (this.noResults = error)
