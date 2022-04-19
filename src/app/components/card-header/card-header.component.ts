@@ -8,5 +8,5 @@ import { UserInfo } from '../../models/user.model';
 })
 export class CardHeaderComponent {
   @Input() userInfo!: UserInfo;
-  maxBioLength = 100;
+  @Input() isLargeScreen = false;
 }

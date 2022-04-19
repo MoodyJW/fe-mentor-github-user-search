@@ -1,4 +1,10 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  Input,
+  OnChanges,
+  SimpleChanges,
+} from '@angular/core';
 
 import { User, UserLinks, UserStats, UserInfo } from '../../models/user.model';
 
@@ -9,11 +15,20 @@ import { User, UserLinks, UserStats, UserInfo } from '../../models/user.model';
 })
 export class CardComponent implements OnChanges {
   @Input() user!: User;
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.isLargeScreen = window.innerWidth > 1000;
+  }
+
+  isLargeScreen = false;
   userLinks!: UserLinks;
   userStats!: UserStats;
   userInfo!: UserInfo;
+  userBio!: string;
 
   ngOnChanges(changes: SimpleChanges): void {
+    this.isLargeScreen = window.innerWidth > 1000;
     if (changes.user && changes.user.currentValue) {
       this.userLinks = {
         location: this.user.location,
@@ -32,8 +47,8 @@ export class CardComponent implements OnChanges {
         htmlUrl: this.user.html_url,
         login: this.user.login,
         createdAt: this.user.created_at,
-        bio: this.user.bio,
       };
+      this.userBio = this.user.bio;
     }
   }
 }

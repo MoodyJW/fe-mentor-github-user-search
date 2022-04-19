@@ -52,5 +52,4 @@ export interface UserInfo {
   htmlUrl: string;
   login: string;
   createdAt: string;
-  bio: string;
 }
