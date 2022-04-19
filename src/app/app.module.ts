@@ -7,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { BioComponent } from './components/bio/bio.component';
 import { CardComponent } from './components/card/card.component';
 import { CardHeaderComponent } from './components/card-header/card-header.component';
 import { LinksGridComponent } from './components/links-grid/links-grid.component';
@@ -17,6 +18,7 @@ import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.com
 @NgModule({
   declarations: [
     AppComponent,
+    BioComponent,
     CardComponent,
     CardHeaderComponent,
     LinksGridComponent,

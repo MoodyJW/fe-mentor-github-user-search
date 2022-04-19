@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -11,28 +11,17 @@ import { UsersService } from '../../services/users.service';
   templateUrl: './search-bar.component.html',
   styleUrls: ['./search-bar.component.scss'],
 })
-export class SearchBarComponent implements OnInit {
+export class SearchBarComponent {
   @Output() userReturned = new EventEmitter<User>();
   searchValue = new FormControl('', Validators.required);
-  buttonColor = 'var(--button-bg)';
   noResults = false;
   unsubscribe$ = new Subject();
   user$: any;
 
   constructor(private usersService: UsersService) {}
 
-  ngOnInit(): void {}
-
   ngOnDestroy(): void {
     this.unsubscribe$.next();
-  }
-
-  onFocus(): void {
-    this.buttonColor = 'var(--button-hover-bg)';
-  }
-
-  onBlur(): void {
-    this.buttonColor = 'var(--button-bg)';
   }
 
   searchUser(): void {
