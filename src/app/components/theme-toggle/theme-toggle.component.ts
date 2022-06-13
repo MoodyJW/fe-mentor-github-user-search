@@ -7,7 +7,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class ThemeToggleComponent {
   @Output() themeToggled = new EventEmitter<string>();
-  currentTheme = 'dark-theme';
+  currentTheme = window.matchMedia('(prefers-color-scheme: light)').matches
+    ? 'light-theme'
+    : 'dark-theme';
 
   toggleTheme() {
     this.currentTheme =
