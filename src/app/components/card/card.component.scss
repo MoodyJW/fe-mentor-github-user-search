@@ -20,6 +20,11 @@
       padding: 40px;
     }
 
+    .card-header {
+      display: flex;
+      overflow: hidden;
+    }
+
     .img-container {
       img {
         width: 70px;
@@ -45,6 +50,7 @@
 
     .user-bio-container {
       margin: 28px 0 24px 0;
+      width: 100%;
 
       @include respond-to("tablet") {
         margin: 24px 0 32px 0;

@@ -11,7 +11,6 @@
     color: var(--primary-text);
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
     font-size: 16px;
 
     @include respond-to("tablet") {
@@ -57,7 +56,6 @@
       color: var(--primary-text);
       overflow: hidden;
       text-overflow: ellipsis;
-      white-space: nowrap;
       font-size: 26px;
     }
   }
