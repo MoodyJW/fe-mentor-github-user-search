@@ -10,11 +10,8 @@ This is a solution to the [GitHub user search app challenge on Frontend Mentor](
     - [The challenge](#the-challenge)
     - [Screenshot](#screenshot)
     - [Links](#links)
-  - [My process](#my-process)
-    - [Built with](#built-with)
+  - [Built with](#built-with)
   - [Author](#author)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -27,7 +24,7 @@ Users should be able to:
 - Search for GitHub users by their username
 - See relevant user information based on their search
 - Switch between light and dark themes
-- **Bonus**: Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` in CSS.
+- Have the correct color scheme chosen for them based on their computer preferences.
 
 ### Screenshot
 
@@ -35,15 +32,14 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here]()
+- Live Site URL: [https://moodyjw.github.io/fe-mentor-github-user-search/](https://moodyjw.github.io/fe-mentor-github-user-search/)
+- GitHub Repo: [https://github.com/MoodyJW/fe-mentor-github-user-search](https://github.com/MoodyJW/fe-mentor-github-user-search)
 
-## My process
-
-### Built with
+## Built with
 
 - Angular
-- CSS
+- SCSS
 - HTML
 
 ## Author
