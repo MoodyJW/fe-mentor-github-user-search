@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here]()
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-github-user-search-using-angulartypescriptrxjsscss-Q6DiQmvKlR](https://www.frontendmentor.io/solutions/responsive-github-user-search-using-angulartypescriptrxjsscss-Q6DiQmvKlR)
 - Live Site URL: [https://moodyjw.github.io/fe-mentor-github-user-search/](https://moodyjw.github.io/fe-mentor-github-user-search/)
 - GitHub Repo: [https://github.com/MoodyJW/fe-mentor-github-user-search](https://github.com/MoodyJW/fe-mentor-github-user-search)
 
