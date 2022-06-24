@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { UntypedFormControl, Validators } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
@@ -13,7 +13,7 @@ import { UsersService } from '../../services/users.service';
 })
 export class SearchBarComponent {
   @Output() userReturned = new EventEmitter<User>();
-  searchValue = new FormControl('', Validators.required);
+  searchValue = new UntypedFormControl('', Validators.required);
   noResults = false;
   unsubscribe$ = new Subject();
   user$: any;
