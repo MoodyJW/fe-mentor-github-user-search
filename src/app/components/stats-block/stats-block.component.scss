@@ -30,6 +30,7 @@
     .stat-title {
       font-size: 11px;
       line-height: 16px;
+      font-weight: normal;
 
       @include respond-to("tablet") {
         font-size: 13px;
