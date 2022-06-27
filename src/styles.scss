@@ -53,3 +53,20 @@ $breakpoints: (
 html {
   height: 100%;
 }
+
+body {
+  background: var(--primary-bg);
+  color: var(--primary-text);
+  font-family: "Space Mono", monospace;
+  line-height: 25px;
+  font-size: 15px;
+  font-weight: var(--regular);
+  padding: 31px 24px;
+  transition-duration: 500ms;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+
+  @include respond-to("tablet") {
+    padding: 140px 96px 0 96px;
+  }
+}
