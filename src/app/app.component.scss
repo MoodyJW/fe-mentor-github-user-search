@@ -1,34 +1,16 @@
-@import "src/styles.scss";
+main {
+  max-width: 730px;
+  margin: 0 auto;
 
-body {
-  background: var(--primary-bg);
-  color: var(--primary-text);
-  font-family: "Space Mono", monospace;
-  line-height: 25px;
-  font-size: 15px;
-  font-weight: var(--regular);
-  padding: 31px 24px;
-  transition-duration: 500ms;
-  -webkit-font-smoothing: auto;
-  -moz-osx-font-smoothing: auto;
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 36px;
 
-  main {
-    max-width: 730px;
-    margin: 0 auto;
-    .header-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 36px;
-
-      h1 {
-        font-size: 26px;
-        line-height: 39px;
-      }
+    h1 {
+      font-size: 26px;
+      line-height: 39px;
     }
-  }
-
-  @include respond-to("tablet") {
-    padding: 140px 96px 0 96px;
   }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs/operators';
 
 import { User } from './models/user.model';
@@ -9,26 +9,21 @@ import { UsersService } from './services/users.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  theme = window.matchMedia('(prefers-color-scheme: light)').matches
-    ? 'light-theme'
-    : 'dark-theme';
+export class AppComponent implements OnInit {
   user!: User;
 
-  constructor(private usersService: UsersService) {
+  constructor(private usersService: UsersService) {}
+
+  ngOnInit(): void {
     this.usersService
-      .getUser('octocat')
+      .getUser('moodyjw')
       .pipe(first())
       .subscribe((user) => {
         this.user = user;
       });
   }
 
-  toggleTheme(currentTheme: string) {
-    this.theme = currentTheme;
-  }
-
-  userReturned(user: any) {
+  userReturned(user: User): void {
     this.user = user;
   }
 }

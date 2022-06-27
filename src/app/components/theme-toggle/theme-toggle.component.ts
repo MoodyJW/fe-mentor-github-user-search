@@ -1,19 +1,36 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Inject, Renderer2 } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-theme-toggle',
   templateUrl: './theme-toggle.component.html',
   styleUrls: ['./theme-toggle.component.scss'],
 })
-export class ThemeToggleComponent {
-  @Output() themeToggled = new EventEmitter<string>();
+export class ThemeToggleComponent implements OnInit {
   currentTheme = window.matchMedia('(prefers-color-scheme: light)').matches
     ? 'light-theme'
     : 'dark-theme';
 
-  toggleTheme() {
-    this.currentTheme =
-      this.currentTheme === 'dark-theme' ? 'light-theme' : 'dark-theme';
-    this.themeToggled.emit(this.currentTheme);
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    private renderer: Renderer2
+  ) {}
+
+  ngOnInit(): void {
+    this.renderer.addClass(this.document.body, this.currentTheme);
+  }
+
+  toggleTheme(): void {
+    const bodyElem = this.document.body;
+    const isLightTheme = bodyElem.classList.contains('light-theme');
+    if (!isLightTheme) {
+      this.currentTheme = 'light-theme';
+      this.renderer.removeClass(bodyElem, 'dark-theme');
+      this.renderer.addClass(bodyElem, this.currentTheme);
+    } else {
+      this.currentTheme = 'dark-theme';
+      this.renderer.removeClass(bodyElem, 'light-theme');
+      this.renderer.addClass(bodyElem, this.currentTheme);
+    }
   }
 }

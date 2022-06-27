@@ -1,16 +1,12 @@
-<body class="{{ theme }}">
-  <main>
-    <header>
-      <div class="header-container">
-        <h1>devfinder</h1>
-        <app-theme-toggle
-          (themeToggled)="toggleTheme($event)"
-        ></app-theme-toggle>
-      </div>
-    </header>
-    <app-search-bar (userReturned)="userReturned($event)"></app-search-bar>
-    <article>
-      <app-card [user]="user"></app-card>
-    </article>
-  </main>
-</body>
+<main>
+  <header>
+    <div class="header-container">
+      <h1>devfinder</h1>
+      <app-theme-toggle></app-theme-toggle>
+    </div>
+  </header>
+  <app-search-bar (userReturned)="userReturned($event)"></app-search-bar>
+  <article>
+    <app-card [user]="user"></app-card>
+  </article>
+</main>
